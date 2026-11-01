@@ -1,0 +1,15 @@
+# Compiled C binaries and object files
+*.out
+*.exe
+*.o
+*.obj
+
+# Common build directories
+build/
+debug/
+release/
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/

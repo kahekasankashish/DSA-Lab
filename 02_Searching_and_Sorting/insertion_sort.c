@@ -1,0 +1,40 @@
+/*
+ * Question: Write a C program to sort an array of integers using insertion sort.
+ */
+#include<stdio.h>
+void sort(int n,int a[n]);
+int main()
+{
+	int n,k;
+	printf("enter n\n");
+	scanf("%d",&n);
+	int a[n];
+	for(k=0;k<n;k++)
+	{
+		printf("enter a no.\n");
+		scanf("%d",&a[k]);
+	}
+		sort(n,a);
+		return 0;
+	
+}
+void sort(int n,int a[n])
+{
+	int i,j,temp;
+	for(i=1;i<n;i++)
+	{
+		temp=a[i];
+		j=i-1;
+		while(j>=0 && a[j]>temp)
+		{
+			a[j+1]=a[j];
+			j=j-1;
+		}
+		a[j+1]=temp;
+	}
+	printf("the new array is:\n");
+	for(i=0;i<n;i++)
+	{
+		printf("%d\n",a[i]);
+	}
+}
